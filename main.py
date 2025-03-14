@@ -76,7 +76,7 @@ class Cactus:
         if self.rect.right < 0:
             self.rect.x = screen_width + random.randint(200, 300)  
 
-    def checkCollision(self):
+    def check_collision(self):
         return player_rect.colliderect(self.rect)
 
 initial_x = screen_width + 100  
@@ -131,7 +131,7 @@ while playing:
     for cactus in cacti:
         cactus.move() 
 
-        if cactus.checkCollision():
+        if cactus.check_collision():
             game_over()
 
 pygame.quit()
